@@ -42,7 +42,6 @@ public:
         }
         //一个数的位数比另一个数位数多，位数多的为li
         ListNode *li = (l1 != NULL ? l1 : l2);
-
         while (li != NULL)
         {
             sum = li->val + plus;//如果上一位有进位，plus=1
