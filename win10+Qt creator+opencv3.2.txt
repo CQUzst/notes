@@ -1,0 +1,50 @@
+电脑系统：Windows10 64位
+
+要下载的文件：
+
+1、Qt 5.6.0 for Windows 32-bit，下载地址：
+
+http://download.qt.io/official_releases/qt/5.6/5.6.0/qt-opensource-windows-x86-mingw492-5.6.0.exe
+
+2、CMake 3.5，下载地址：
+
+https://cmake.org/files/v3.5/cmake-3.5.0-win32-x86.zip
+
+3、OpenCV3.1，下载地址：（这个需要先打开网址，然后在点击 Download opencv-3.1.0.exe）
+
+https://sourceforge.NET/projects/opencvlibrary/files/OpenCV-win/3.1.0/opencv-3.1.0.exe
+
+添加环境变量：
+D:\Qt\5.10.0\mingw53_32\bin
+D:\Qt\Tools\mingw530_32\bin
+
+添加完环境变量要重启电脑
+
+cmake-gui
+Where is the source code：选择OpenCV解压的源文件文件夹位置； 
+Where to build the binaries：选择自定义的空文件夹用于保存生成对象 
+点击Next按钮，会出现配置编译器gcc和g++的界面,gcc和g++在Qt安装目录下： 
+D:\Qt\Qt5.8.0\Tools\mingw530_32\bin\gcc 
+D:\Qt\Qt5.8.0\Tools\mingw530_32\bin\g++
+Configure
+选择WITH_OPENGL和WITH_QT支持选项 
+取消ENABLE_PRECOMPILED_HEADERS 
+Configure Configure  Generate
+
+打开CMD窗口，进入生成OpenCV目标文件的文件夹，输入mingw32-make开始编译
+为了加快编译速度，可以使用-j标志同时运行多个编译作业。 在8核CPU上，您可以将其设置为8或更高。
+ cd d:\
+ cd opencv-build  
+ mingw32-make -j 8
+ mingw32-make install
+
+添加环境变量
+D:\opencv-build\install\x86\mingw\bin
+添加完环境变量要重启电脑
+
+qt creator pro文件加入
+INCLUDEPATH += D:/opencv/install/install/include/opencv \
+            D:/opencv/install/install/include/opencv2  \
+            D:/opencv/install/install/include
+
+LIBS += -L D:/opencv/install/bin/libopencv_*.dll
