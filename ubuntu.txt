@@ -136,3 +136,16 @@ ubuntu开机后经常提示:
 输入　sudo gedit /etc/default/apport 
 把里面的enabled=1改成enabled=0，保存
 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Ubuntu16.04与Windows10双系统启动顺序：
+使用命令打开配置文件：
+sudo gedit /etc/default/grub
+要修改默认启动顺序，找到如下行：（应该是除去注释的第一行）
+GRUB_DEFAULT=0（0是ubuntu，4是windoss）
+
+要修改默认等待时间，找到如下行：
+GRUB_TIMEOUT=10
+单位为秒。
+最后执行：
+sudo update-grub
+使更改生效。
