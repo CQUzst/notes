@@ -1,8 +1,8 @@
 allspark1
-»·¾³£ºubuntu 16.04
-»»Çå»ªÔ´ 
+ç¯å¢ƒï¼šubuntu 16.04
+æ¢æ¸…åæº 
 sudo gedit /etc/apt/sources.list
-# Ä¬ÈÏ×¢ÊÍÁËÔ´Âë¾µÏñÒÔÌá¸ß apt update ËÙ¶È£¬ÈçÓĞĞèÒª¿É×ÔĞĞÈ¡Ïû×¢ÊÍ
+# é»˜è®¤æ³¨é‡Šäº†æºç é•œåƒä»¥æé«˜ apt update é€Ÿåº¦ï¼Œå¦‚æœ‰éœ€è¦å¯è‡ªè¡Œå–æ¶ˆæ³¨é‡Š
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
@@ -12,7 +12,7 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricte
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
 
-# Ô¤·¢²¼Èí¼şÔ´£¬²»½¨ÒéÆôÓÃ
+# é¢„å‘å¸ƒè½¯ä»¶æºï¼Œä¸å»ºè®®å¯ç”¨
 # deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
 sudo apt-get update
@@ -24,79 +24,79 @@ pip
 sudo apt install python-pip
 
 tensorflow1.6
-pip install tensorflow£¨ÏÂÔØºÜÂı£©
+pip install tensorflowï¼ˆä¸‹è½½å¾ˆæ…¢ï¼‰
 
 anaconda2.7
-Çå»ªAnaconda¾µÏñµØÖ·https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/ÏÂÔØAnaconda2-5.1.0-Linux-x86_64.sh£¨ÏÂÔØËÙ¶ÈºÜ¿ì£©
-ÏÂÔØÍê½øÈëÏÂÔØÄ¿Â¼ bash Anaconda2-5.1.0-Linux-x86_64.sh Ò»Ö±enter yes£¬°²×°Íê³ÉÌáÊ¾ÊÇ·ñ°²×°vscode£¬²»ÓÃ×°
+æ¸…åAnacondaé•œåƒåœ°å€https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/ä¸‹è½½Anaconda2-5.1.0-Linux-x86_64.shï¼ˆä¸‹è½½é€Ÿåº¦å¾ˆå¿«ï¼‰
+ä¸‹è½½å®Œè¿›å…¥ä¸‹è½½ç›®å½• bash Anaconda2-5.1.0-Linux-x86_64.sh ä¸€ç›´enter yesï¼Œå®‰è£…å®Œæˆæç¤ºæ˜¯å¦å®‰è£…vscodeï¼Œä¸ç”¨è£…
 
                                              opencv3.3
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-Ò» °²×°opencvËùĞè¿â
+ä¸€ å®‰è£…opencvæ‰€éœ€åº“
 
 $sudo apt-get install build-essential
 $ sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
-$ sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev # ´¦ÀíÍ¼ÏñËùĞèµÄ°ü
+$ sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev # å¤„ç†å›¾åƒæ‰€éœ€çš„åŒ…
 $ sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev liblapacke-dev
-$ sudo apt-get install libxvidcore-dev libx264-dev # ´¦ÀíÊÓÆµËùĞèµÄ°ü
-$ sudo apt-get install libatlas-base-dev gfortran # ÓÅ»¯opencv¹¦ÄÜ
+$ sudo apt-get install libxvidcore-dev libx264-dev # å¤„ç†è§†é¢‘æ‰€éœ€çš„åŒ…
+$ sudo apt-get install libatlas-base-dev gfortran # ä¼˜åŒ–opencvåŠŸèƒ½
 $ sudo apt-get install ffmpeg
 
 
-¶ş ÏÂÔØ×îĞÂopencvÔ´Âë 
-1 ½«ÎÄ¼ş¼ĞÏÂopencv3.3Ñ¹Ëõ°ü·Åµ½homeÏÂ
+äºŒ ä¸‹è½½æœ€æ–°opencvæºç  
+1 å°†æ–‡ä»¶å¤¹ä¸‹opencv3.3å‹ç¼©åŒ…æ”¾åˆ°homeä¸‹
 2 unzip opencv-3.3.0.zip
 3 cd ~/opencv-3.3.0
 
-3.±àÒëopencv
+3.ç¼–è¯‘opencv
 1 cd ~/opencv-3.3.0
 2 mkdir release
 3 cd release
 4.sudo apt-get install cmake-gui
 5.cmake-gui
 
-/¡Áhttp://blog.csdn.net/lien0906/article/details/44774705  ²Î¿¼Á´½ÓÖĞ²½Öè¡Á/
-µÚÒ»ĞĞÑ¡ÔñÂ·¾¶/home/qiuyilin/opencv-3.3.0
-µÚ¶şĞĞÑ¡ÔñÂ·¾¶/home/qiuyilin/opencv-3.3.0/release
+/Ã—http://blog.csdn.net/lien0906/article/details/44774705  å‚è€ƒé“¾æ¥ä¸­æ­¥éª¤Ã—/
+ç¬¬ä¸€è¡Œé€‰æ‹©è·¯å¾„/home/qiuyilin/opencv-3.3.0
+ç¬¬äºŒè¡Œé€‰æ‹©è·¯å¾„/home/qiuyilin/opencv-3.3.0/release
 finish
-Ö®ºóÓĞ¸ö¶«Î÷ÒªÏÂÔØºÜ¾Ã
-ÏÂ±ßÀ¸ÖĞ
-¹´Ñ¡£ºBUILD_opencv_world  BUILD_TBB  WITH_V4L 
-Èç¹û°²×°¹ıCUDA»áÏÔÊ¾with cuda ²»Òª¹´Ñ¡BUILD_CUDA STUBS ¹´Ñ¡cuda fast math
-µã»÷ generateÖ±µ½configureÖØĞÂÁÁ
+ä¹‹åæœ‰ä¸ªä¸œè¥¿è¦ä¸‹è½½å¾ˆä¹…
+ä¸‹è¾¹æ ä¸­
+å‹¾é€‰ï¼šBUILD_opencv_world  BUILD_TBB  WITH_V4L 
+å¦‚æœå®‰è£…è¿‡CUDAä¼šæ˜¾ç¤ºwith cuda ä¸è¦å‹¾é€‰BUILD_CUDA STUBS å‹¾é€‰cuda fast math
+ç‚¹å‡» generateç›´åˆ°configureé‡æ–°äº®
 
-¹Ø±ÕGUI½çÃæ
+å…³é—­GUIç•Œé¢
 6.make
 7.sudo make install
 
 
-ÔÚubuntuÏÂ±àÒëopencv³ÌĞòºó£¬Ö´ĞĞ±¨ÏÂÃæµ½´íÎó£º
+åœ¨ubuntuä¸‹ç¼–è¯‘opencvç¨‹åºåï¼Œæ‰§è¡ŒæŠ¥ä¸‹é¢åˆ°é”™è¯¯ï¼š
 error while loading shared libraries: libopencv_core.so.2.4: cannot open shared object file: No such file or directory
-½â¾ö·½·¨£ºÕÒµ½libopencv_¿ªÍ·µ½¿âµÄÄ¿Â¼£¬ÔÚ/usr/local/libÏÂÃæ£¬ÔÚ/etc/ld.so.conf.d/ÏÂÃæĞÂ½¨Ò»¸öopencv.conf£¬ÀïÃæĞ´Èë/usr/local/lib£¬×îºóÖ´ĞĞÏÂsudo ldconfig -v¼´¿É¡£
+è§£å†³æ–¹æ³•ï¼šæ‰¾åˆ°libopencv_å¼€å¤´åˆ°åº“çš„ç›®å½•ï¼Œåœ¨/usr/local/libä¸‹é¢ï¼Œåœ¨/etc/ld.so.conf.d/ä¸‹é¢æ–°å»ºä¸€ä¸ªopencv.confï¼Œé‡Œé¢å†™å…¥/usr/local/libï¼Œæœ€åæ‰§è¡Œä¸‹sudo ldconfig -vå³å¯ã€‚
 
-°²×°¹ı³ÌÖĞµÄ°×É«¾¯¸æ¿ÉÒÔÎŞÊÓ¡£
-cdblockÅäÖÃopencv
-codeblocks¿ÉÒÔ´´½¨opencvµÄ¹¤³Ì£¬ÔÙ´´½¨ºÃÖ®ºó
+å®‰è£…è¿‡ç¨‹ä¸­çš„ç™½è‰²è­¦å‘Šå¯ä»¥æ— è§†ã€‚
+cdblocké…ç½®opencv
+codeblockså¯ä»¥åˆ›å»ºopencvçš„å·¥ç¨‹ï¼Œå†åˆ›å»ºå¥½ä¹‹å
 
 setting-compiler
-£¨1£©linker settingsÔÙÆäÖĞÌí¼Ó/usr/local/libÖĞÓĞ¹ØopencvµÄËùÓĞ.soÎÄ¼ş£¨·½±ãÆğ¼û£¬ÎªÃâÒÅÂ©£©--¿ÉÒÔÈ«²¿Ñ¡ÖĞ£¬Í¬Ê±Ìí¼Ó¡£
+ï¼ˆ1ï¼‰linker settingså†å…¶ä¸­æ·»åŠ /usr/local/libä¸­æœ‰å…³opencvçš„æ‰€æœ‰.soæ–‡ä»¶ï¼ˆæ–¹ä¾¿èµ·è§ï¼Œä¸ºå…é—æ¼ï¼‰--å¯ä»¥å…¨éƒ¨é€‰ä¸­ï¼ŒåŒæ—¶æ·»åŠ ã€‚
 
-£¨2£© search directories -- CompilerÖĞÌí¼Ó/usr/local/include/ ¡¢/usr/local/include/opencv¡¢/usr/local/include/opencv2Èı¸öÂ·¾¶¡£
+ï¼ˆ2ï¼‰ search directories -- Compilerä¸­æ·»åŠ /usr/local/include/ ã€/usr/local/include/opencvã€/usr/local/include/opencv2ä¸‰ä¸ªè·¯å¾„ã€‚
 
-£¨3£©search directories -- LinkerÖĞÌí¼Ó /usr/local/libÂ·¾¶
-ÅäÖÃÍê³É¡£
+ï¼ˆ3ï¼‰search directories -- Linkerä¸­æ·»åŠ  /usr/local/libè·¯å¾„
+é…ç½®å®Œæˆã€‚
 
 
-ÎÊÌâ
-ÔÚÎÒ°²×°Èí¼şµÄÊ±ºò£¬ÌáÊ¾apt-get -f installÕâ¸öĞÅÏ¢£¬È»ºó²é¿´ÆäËûµÄÌáÊ¾ĞÅÏ¢·¢ÏÖÊ±È±ÉÙÁËÒ»Ğ©ÒÔÒÀÀµ¿â¡£
+é—®é¢˜
+åœ¨æˆ‘å®‰è£…è½¯ä»¶çš„æ—¶å€™ï¼Œæç¤ºapt-get -f installè¿™ä¸ªä¿¡æ¯ï¼Œç„¶åæŸ¥çœ‹å…¶ä»–çš„æç¤ºä¿¡æ¯å‘ç°æ—¶ç¼ºå°‘äº†ä¸€äº›ä»¥ä¾èµ–åº“ã€‚
 
-½â¾ö°ì·¨ÎªÖ´ĞĞ£ºsudo apt-get -f installÃüÁî¡£
-usr/local/libÀïµÄÎÄ¼şÊÇ.a¶ø²»ÊÇ.so 
-https://www.cnblogs.com/arkenstone/p/6490017.html »»ÖÖ·½·¨×°Ò»±é
+è§£å†³åŠæ³•ä¸ºæ‰§è¡Œï¼šsudo apt-get -f installå‘½ä»¤ã€‚
+usr/local/libé‡Œçš„æ–‡ä»¶æ˜¯.aè€Œä¸æ˜¯.so 
+https://www.cnblogs.com/arkenstone/p/6490017.html æ¢ç§æ–¹æ³•è£…ä¸€é
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
-V4l£ºmake¹ı³Ì cmake .  make
+V4lï¼šmakeè¿‡ç¨‹ cmake .  make
 version:
 
 QMAKE_CXXFLAGS += -std=c++11
@@ -119,3 +119,20 @@ LIBS += /usr/local/lib/libopencv_calib3d.so \
 /usr/local/lib/libopencv_videostab.so \
 /usr/lib/x86_64-linux-gnu/libpthread.so \
 /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+win10å’Œubuntuç³»ç»Ÿæ—¶é—´ä¸åŒæ­¥
+è¿›å…¥Ubuntuç³»ç»Ÿï¼Œæ‰“å¼€ç»ˆç«¯ï¼Œè¾“å…¥ä¸‹é¢çš„å‘½ä»¤ï¼š
+sudo apt-get install ntpdate
+sudo ntpdate time.windows.com
+sudo hwclock --localtime --systohc
+é‡å¯ç”µè„‘ï¼Œè¿›å…¥Windows
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ubuntuå¼€æœºåç»å¸¸æç¤º:
+æ£€æµ‹åˆ°ç³»ç»Ÿç¨‹åºå‡ºç°é—®é¢˜
+
+æ‰“å¼€ç»ˆç«¯ï¼Œ
+è¾“å…¥ã€€sudo gedit /etc/default/apport 
+æŠŠé‡Œé¢çš„enabled=1æ”¹æˆenabled=0ï¼Œä¿å­˜
+
