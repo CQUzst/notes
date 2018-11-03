@@ -45,54 +45,35 @@ $ sudo apt-get install ffmpeg
 
 二 下载最新opencv源码 
 1 将文件夹下opencv3.3压缩包放到home下
-2 unzip opencv-3.3.0.zip
-3 cd ~/opencv-3.3.0
+2 unzip opencv-3.4.1.zip
+3 cd ~/opencv-3.4.1
 
 3.编译opencv
-1 cd ~/opencv-3.3.0
+1 cd ~/opencv-3.4.1
 2 mkdir release
 3 cd release
 4.sudo apt-get install cmake-gui
 5.cmake-gui
-
-/×http://blog.csdn.net/lien0906/article/details/44774705  参考链接中步骤×/
-第一行选择路径/home/qiuyilin/opencv-3.3.0
-第二行选择路径/home/qiuyilin/opencv-3.3.0/release
+第一行选择路径/home/zst/opencv-3.4.1
+第二行选择路径/home/zst/opencv-3.4.1/release
 finish
 之后有个东西要下载很久
 下边栏中
 勾选：BUILD_opencv_world  BUILD_TBB  WITH_V4L 
-如果安装过CUDA会显示with cuda 不要勾选BUILD_CUDA STUBS 勾选cuda fast math
+如果安装过CUDA会显示with cuda 不要勾选BUILD_CUDA STUBS
 点击 generate直到configure重新亮
 
 关闭GUI界面
 6.make
 7.sudo make install
 
-
-在ubuntu下编译opencv程序后，执行报下面到错误：
-error while loading shared libraries: libopencv_core.so.2.4: cannot open shared object file: No such file or directory
-解决方法：找到libopencv_开头到库的目录，在/usr/local/lib下面，在/etc/ld.so.conf.d/下面新建一个opencv.conf，里面写入/usr/local/lib，最后执行下sudo ldconfig -v即可。
-
-安装过程中的白色警告可以无视。
-cdblock配置opencv
-codeblocks可以创建opencv的工程，再创建好之后
-
-setting-compiler
-（1）linker settings再其中添加/usr/local/lib中有关opencv的所有.so文件（方便起见，为免遗漏）--可以全部选中，同时添加。
-
-（2） search directories -- Compiler中添加/usr/local/include/ 、/usr/local/include/opencv、/usr/local/include/opencv2三个路径。
-
-（3）search directories -- Linker中添加 /usr/local/lib路径
-配置完成。
-
-
-问题
-在我安装软件的时候，提示apt-get -f install这个信息，然后查看其他的提示信息发现时缺少了一些以依赖库。
-
-解决办法为执行：sudo apt-get -f install命令。
-usr/local/lib里的文件是.a而不是.so 
-https://www.cnblogs.com/arkenstone/p/6490017.html 换种方法装一遍
+给系统加入opencv库的环境变量
+8.sudo gedit /etc/ld.so.conf，在文件中加上一行 /usr/loacal/lib(/user/local/lib是opencv安装路径) 再运行sudo ldconfig
+9.修改bash.bashrc文件，sudo gedit /etc/bash.bashrc 
+在文件末尾加入： 
+PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig 
+export PKG_CONFIG_PATH 
+10.然后source /etc/bash.bashrc,完成
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -100,25 +81,9 @@ V4l：make过程 cmake .  make
 version:
 
 QMAKE_CXXFLAGS += -std=c++11
-LIBS += /usr/local/lib/libopencv_calib3d.so \
-/usr/local/lib/libopencv_core.so \
-/usr/local/lib/libopencv_dnn.so \
-/usr/local/lib/libopencv_features2d.so \
-/usr/local/lib/libopencv_flann.so \
-/usr/local/lib/libopencv_highgui.so \
-/usr/local/lib/libopencv_imgcodecs.so \
-/usr/local/lib/libopencv_imgproc.so \
-/usr/local/lib/libopencv_ml.so \
-/usr/local/lib/libopencv_objdetect.so \
-/usr/local/lib/libopencv_photo.so \
-/usr/local/lib/libopencv_shape.so \
-/usr/local/lib/libopencv_stitching.so \
-/usr/local/lib/libopencv_superres.so \
-/usr/local/lib/libopencv_video.so \
-/usr/local/lib/libopencv_videoio.so \
-/usr/local/lib/libopencv_videostab.so \
-/usr/lib/x86_64-linux-gnu/libpthread.so \
-/usr/lib/x86_64-linux-gnu/libstdc++.so.6
+LIBS += /usr/local/lib/libopencv_world.so.3.4.1 \
+/usr/local/lib/libopencv_world.so \
+/usr/local/lib/libopencv_world.so.3.4
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 win10和ubuntu系统时间不同步
