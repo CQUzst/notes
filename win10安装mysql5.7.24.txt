@@ -1,0 +1,74 @@
+1.官网下载https://dev.mysql.com/downloads/mysql/5.7.html#downloads
+
+2.在E:\mysql目录下新建my.ini文件，复制如下内容
+………………………………………………………………………………………………………………
+[mysql]
+ 
+# 设置mysql客户端默认字符集
+ 
+default-character-set=utf8
+ 
+[mysqld]
+ 
+#设置3306端口
+ 
+port = 3306
+ 
+# 设置mysql的安装目录
+ 
+basedir=D:\mysql-5.7.24-winx64
+ 
+# 设置mysql数据库的数据的存放目录
+ 
+datadir=D:\mysql-5.7.24-winx64\data
+ 
+# 允许最大连接数
+ 
+max_connections=200
+ 
+# 服务端使用的字符集默认为8比特编码的latin1字符集
+ 
+character-set-server=utf8
+ 
+# 创建新表时将使用的默认存储引擎
+ 
+default-storage-engine=INNODB
+
+………………………………………………………………………………………………………………
+
+3.将D:\mysql-5.7.24-winx64\bin添加到系统环境变量
+
+4.管理员身份运行cmd，进入D:\mysql-5.7.24-winx64\bin目录
+
+5.运行mysqld --install 安装服务 控制台会提示: Services successfully installed （如果运行mysqld --install 安装服务 显示已存在输入mysqld --remove 则移除之前安装好的mysql  再次运行mysqld --install）
+
+6.运行命令：mysqld  --initialize (此时会生成data目录)
+
+7.启动服务  net start mysql
+
+8.修改密码：
+第一步: net stop mysql (停止服务)
+
+第二步: 再执行mysqld --skip-grant-tables开启无密码的MySQL Server。这个终端不要关
+
+第三步: 管理员权限新开一个cmd终端进入bin目录，输入mysql -u root -p进入mysql
+
+第四步 ：然后更新root账户的密码为'root'。命令：update mysql.user set authentication_string=password("root") where user="root";
+
+第五步：执行flush privileges刷新权限。
+
+第六步：quit；
+
+第七步：不用管理员权限，直接打开cmd，任意路径下输入mysql -u root -p进入mysql 输入密码root即可
+
+第八步：再次更改密码：
+
+step 1: SET PASSWORD = PASSWORD('your new password');
+
+step 2: ALTER USER 'root'@'localhost' PASSWORD EXPIRE NEVER;
+
+step 3: flush privileges;
+
+第九步：再次打开cmd 重新登录
+
+完成
