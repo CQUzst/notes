@@ -1,2 +1,2 @@
-# Qt
-Qt program
+# Cpp
+Cpp program
