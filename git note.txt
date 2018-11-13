@@ -26,6 +26,8 @@ git pull origin master
 如果git pull 失败 ,提示：fatal: refusing to merge unrelated histories
 使用git pull origin master --allow-unrelated-histories
 
-下载分支程序过程如下：
-选择一个文件夹 git init
-添加仓库地址/更换仓库地址，然后查看远程仓库地址确认一下，命令如上，然后pull下来，可以修改后再push上去
+复制程序到本地：
+git clone +网页地址
+
+修改分支程序过程如下：
+添加仓库地址/更换仓库地址，然后查看远程仓库地址确认一下，命令如上，复制程序到本地，修改后再push上去
