@@ -13,6 +13,7 @@ git commit只是提交到本地的仓库，远程仓库并无影响
 git remote add origin git@github.com:CQUzst/opencv.git
 
 更换远程仓库地址
+git remote rm origin 先删除
 git remote set-url origin git@github.com:CQUzst/RBFN.git
 
 git查看远程仓库地址命令
