@@ -1,8 +1,14 @@
-JDKÏÂÔØ
-µØÖ·£ºhttp://www.oracle.com/technetwork/java/javase/downloads/index.html
-ÏÂÔØºó°²×°µ½Ò»¸öÄ¿Â¼
-½«°²×°Ä¿Â¼ ÒÔ¼°Ä¿Â¼ÏÂµÄbin Ìí¼Ó»·¾³±äÁ¿
-win10 cmd java -version¼ì²âÒ»ÏÂ°æ±¾
-ÏÂÔØeclipse
-¹ÙÍø£ºhttps://www.eclipse.org/downloads/
-½âÑ¹ÁË¾ÍÓĞexe¿ÉÖ±½ÓÖ´ĞĞ
+JDKä¸‹è½½
+åœ°å€ï¼šhttp://www.oracle.com/technetwork/java/javase/downloads/index.html
+ä¸‹è½½åå®‰è£…åˆ°ä¸€ä¸ªç›®å½•
+å°†å®‰è£…ç›®å½• ä»¥åŠç›®å½•ä¸‹çš„bin æ·»åŠ ç¯å¢ƒå˜é‡
+win10 cmd java -versionæ£€æµ‹ä¸€ä¸‹ç‰ˆæœ¬
+ä¸‹è½½eclipse
+å®˜ç½‘ï¼šhttps://www.eclipse.org/downloads/
+è§£å‹äº†å°±æœ‰exeå¯ç›´æ¥æ‰§è¡Œ
+æ”¹å˜eclipseä¸»é¢˜ï¼š
+window->preferences->Appearence->Theme
+æ”¹eclipseå­—ä½“ï¼š
+window->preferences->ColorAndFonts->Basic->TextFont
+eclipseå¼¹å‡ºAn internal error occurred during: "Polling news feeds":
+window->preferences->News å–æ¶ˆenable automatic news polling
