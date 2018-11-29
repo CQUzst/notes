@@ -1,0 +1,6 @@
+win10和ubuntu系统时间不同步
+进入Ubuntu系统，打开终端，输入下面的命令：
+sudo apt-get install ntpdate
+sudo ntpdate time.windows.com
+sudo hwclock --localtime --systohc
+重启电脑，进入Windows

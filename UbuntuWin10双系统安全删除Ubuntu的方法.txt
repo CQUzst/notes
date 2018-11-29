@@ -1,8 +1,0 @@
-下载MBRFix：https://sysint.no/mbrfix/ 解压
-右键MbrFix64.exe兼容性 管理员身份运行
-win+R cmd
-cd到MBRFix64.exe的文件夹
-输入：MbrFix64 /drive 0 fixmbr
-OK
-磁盘管理删除没有盘符名称的磁盘空间即可
-

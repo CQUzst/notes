@@ -1,0 +1,9 @@
+pip
+sudo apt install python-pip
+
+tensorflow1.6
+pip install tensorflow（下载很慢）
+
+anaconda2.7
+清华Anaconda镜像地址https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/下载Anaconda2-5.1.0-Linux-x86_64.sh（下载速度很快）
+下载完进入下载目录 bash Anaconda2-5.1.0-Linux-x86_64.sh 一直enter yes，安装完成提示是否安装vscode，不用装
