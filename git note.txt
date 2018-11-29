@@ -28,7 +28,16 @@ git pull origin master
 使用git pull origin master --allow-unrelated-histories
 
 复制程序到本地：
-git clone +网页地址
+git clone +git@github.com:CQUzst/notes
 
 修改分支程序过程如下：
-添加仓库地址/更换仓库地址，然后查看远程仓库地址确认一下，命令如上，复制程序到本地，修改后再push上去
+1.先删除本地仓库全部内容；
+2.git remote rm origin //先删除远程仓库
+3.git remote add origin git@github.com:CQUzst/notes //添加远程仓库
+4.git remote -v //看一下版本
+5.git pull origin master 取回远程仓库内容
+6.修改内容
+7.git add . //全部提交内容
+8.git commit -m '注释'
+9.git push -u origin master //提交，完成
+
