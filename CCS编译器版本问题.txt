@@ -1,5 +1,0 @@
-编译器版本在这里下载：
-http://software-dl.ti.com/codegen/non-esd/downloads/download.htm#C2000
-下载解压
-复制到ccs/tools/compiler
-import program->properties->general->Compiler version->more
