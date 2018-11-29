@@ -1,0 +1,32 @@
+项目include路径一定要指定到项目文件夹下，例如：
+"E:\DSP_program_version\change_IndependentProject_BLDC_TR\DSP2833x_common\include"
+
+编译器版本在这里下载：
+http://software-dl.ti.com/codegen/non-esd/downloads/download.htm#C2000
+下载解压
+复制到ccs/tools/compiler
+import program->properties->general->Compiler version->more
+
+科尔摩根电机调试记录：
+电机霍尔传感器的输出测试，用手顺时针、逆时针旋转电机几圈，并记录数值如下：
+顺时针132645，逆时针154623 一圈重复6次，说明本电机是6级对数
+WVU 红 绿 蓝 正常运转
+WVU 蓝 红 绿 一向对一向不对
+WVU 绿 蓝 红 转不起来
+WVU 红 蓝 绿 堵转
+WVU 蓝 绿 红 转不起来
+WVU 绿 红 蓝 堵转
+
+串口指令 
+03开环启动/停止 
+04 换向
+05 XX XX 开环PWM值 越高越快
+06 XX XX设定转速setSpeed
+在ePWM.C里面 设置更新了PWM_Val：EPwm3Regs.CMPA.half.CMPA = MotorADJ.PWM_Val;
+
+void SetPWMVal(int PWMval)函数实现的是和MotorADJ.PWM_Val = PWM_FRE - my_setPWMval一样的功能
+PWM_Val值越低转速越快
+
+中断测速：
+先检测一圈进入多少次中断，然后用计时器去除转一圈的时间
+

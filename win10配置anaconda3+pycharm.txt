@@ -1,0 +1,10 @@
+清华大学的镜像网
+https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/
+安装过程中勾选添加到系统环境变量 省得后面自己手动添加
+Pycharm官网网址：
+http://www.jetbrains.com/pycharm/download/#section=windows
+下载PyCharm安装包
+勾选64-bit launcher .py
+PyCharm 配置anaconda：
+file->Settings->project->project interpreter
+add:anaconda3\python.exe

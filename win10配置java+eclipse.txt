@@ -1,0 +1,14 @@
+JDK下载
+地址：http://www.oracle.com/technetwork/java/javase/downloads/index.html
+下载后安装到一个目录
+将安装目录 以及目录下的bin 添加环境变量
+win10 cmd java -version检测一下版本
+下载eclipse
+官网：https://www.eclipse.org/downloads/
+解压了就有exe可直接执行
+改变eclipse主题：
+window->preferences->Appearence->Theme
+改eclipse字体：
+window->preferences->ColorAndFonts->Basic->TextFont
+eclipse弹出An internal error occurred during: "Polling news feeds":
+window->preferences->News 取消enable automatic news polling

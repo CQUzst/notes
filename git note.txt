@@ -1,0 +1,34 @@
+					git
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+选择一个本地仓库位置git init
+
+如果你想分享这个文件夹里的所有代码，就在 add后面加“.”，上面的例子就是这样，如果传指定的，只需要把“.”改为文件名即可
+选择要添加进仓库的文件：git add .
+
+git commit -m '提交的说明注释'
+
+git commit只是提交到本地的仓库，远程仓库并无影响
+
+添加远程地址
+git remote add origin git@github.com:CQUzst/opencv.git
+
+更换远程仓库地址
+git remote rm origin 先删除
+git remote set-url origin git@github.com:CQUzst/RBFN.git
+
+git查看远程仓库地址命令
+git remote -v
+
+上传到github
+git push -u origin master
+
+取回远程主机某个分支的更新
+git pull origin master
+如果git pull 失败 ,提示：fatal: refusing to merge unrelated histories
+使用git pull origin master --allow-unrelated-histories
+
+复制程序到本地：
+git clone +网页地址
+
+修改分支程序过程如下：
+添加仓库地址/更换仓库地址，然后查看远程仓库地址确认一下，命令如上，复制程序到本地，修改后再push上去
