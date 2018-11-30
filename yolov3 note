@@ -4,7 +4,9 @@ git clone https://github.com/pjreddie/darknet.git
 cd darknet
 make
 2. 保持当前目录 ./darknet   正常会显示usage: ./darknet <function>
-3.下载编译opencv，环境添加到系统变量，教程见《ubuntu安装opencv》 然后makefile 里面 OPENCV=1
+3.下载编译opencv，环境添加到系统变量，教程见另一个note <ubuntu安装opencv> 
+  注意：opencv必须是3.40版本，3.41编译有问题。 
+  然后makefile 里面 OPENCV=1
 4.测试一下 ./darknet imtest data/eagle.jpg 会出现一只老鹰
 同样在darknet目录下，执行
 wget https://pjreddie.com/media/files/yolov3.weights   #下载权重文件
