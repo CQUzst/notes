@@ -9,3 +9,6 @@ http://www.jetbrains.com/pycharm/download/#section=windows
 PyCharm 配置anaconda：
 file->Settings->project->project interpreter
 add:anaconda3\python.exe
+如果有其他库要用，在网站下载：https://www.lfd.uci.edu/~gohlke/pythonlibs/#xgboost
+比如：xgboost‑0.7‑cp36‑cp36m‑win_amd64.whl，anaconda3/目录下，建立一个my_whl文件夹，下载完复制进去
+pip install xgboost‑0.7‑cp36‑cp36m‑win_amd64.whl
