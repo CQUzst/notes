@@ -1,10 +1,11 @@
-Çå»ª´óÑ§µÄ¾µÏñÍø
+æ¸…åŽå¤§å­¦çš„é•œåƒç½‘
 https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/
-°²×°¹ý³ÌÖÐ¹´Ñ¡Ìí¼Óµ½ÏµÍ³»·¾³±äÁ¿ Ê¡µÃºóÃæ×Ô¼ºÊÖ¶¯Ìí¼Ó
-Pycharm¹ÙÍøÍøÖ·£º
+æ³¨æ„ï¼š3.5.3å¯¹åº”python3.7   3.5.2å¯¹åº”python3.6
+å®‰è£…è¿‡ç¨‹ä¸­å‹¾é€‰æ·»åŠ åˆ°ç³»ç»ŸçŽ¯å¢ƒå˜é‡ çœå¾—åŽé¢è‡ªå·±æ‰‹åŠ¨æ·»åŠ 
+Pycharmå®˜ç½‘ç½‘å€ï¼š
 http://www.jetbrains.com/pycharm/download/#section=windows
-ÏÂÔØPyCharm°²×°°ü
-¹´Ñ¡64-bit launcher .py
-PyCharm ÅäÖÃanaconda£º
+ä¸‹è½½PyCharmå®‰è£…åŒ…
+å‹¾é€‰64-bit launcher .py
+PyCharm é…ç½®anacondaï¼š
 file->Settings->project->project interpreter
 add:anaconda3\python.exe
