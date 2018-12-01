@@ -12,3 +12,7 @@ add:anaconda3\python.exe
 如果有其他库要用，在网站下载：https://www.lfd.uci.edu/~gohlke/pythonlibs/#xgboost
 比如：xgboost‑0.7‑cp36‑cp36m‑win_amd64.whl，anaconda3/目录下，建立一个my_whl文件夹，下载完复制进去
 pip install xgboost‑0.7‑cp36‑cp36m‑win_amd64.whl
+部分库不用下载可直接用命令行下载安装，比如：
+pip install catboost
+pip install lightgbm
+pip install catboost
