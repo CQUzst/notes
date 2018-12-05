@@ -41,7 +41,7 @@ git pull origin master
 使用git pull origin master --allow-unrelated-histories
 
 复制程序到本地：
-git clone +git@github.com:CQUzst/notes
+git clone git://github.com/CQUzst/Cpp.git
 
 修改分支程序过程如下：
 1.先删除本地仓库全部内容；
