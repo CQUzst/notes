@@ -3,10 +3,17 @@
 选择一个本地仓库位置git init
 
 新电脑创建SSH链接：
-第一步：创建SSH Key：打开命令行，输入如下命令（Window下打开Git Bash）：ssh-keygen -t rsa -C “821988519@qq.com”
+第一步：创建SSH Key：打开命令行，输入如下命令（Window下打开Git Bash）：ssh-keygen -t rsa -C “CQUzst/821988519@qq.com”
 第二步：登录github,打开” settings”中的SSH Keys页面，然后点击“Add SSH Key”,填上任意title，在Key文本框里黏贴id_rsa.pub文件的内容。 add key。
-第三步：git bash中使用 " git clone 远程分支 "将远程分支同步到本地。之后的操作github上的源码就想操作本地一样
-第四步：ssh git@github.com 校验是否连接成功
+第三步：在Git中输入ssh -T git@github.com验证与github连接是否成功时
+
+The authenticity of host 'github.com (13.250.177.223)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? yes（输入yes）
+Warning: Permanently added 'github.com,13.250.177.223' (RSA) to the list of known hosts.
+
+Hi XXX! You've successfully authenticated, but GitHub does not provide shell access.
+
 
 如果你想分享这个文件夹里的所有代码，就在 add后面加“.”，上面的例子就是这样，如果传指定的，只需要把“.”改为文件名即可
 选择要添加进仓库的文件：git add .
