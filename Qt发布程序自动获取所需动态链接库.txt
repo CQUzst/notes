@@ -1,0 +1,4 @@
+开始菜单--》Qt 5.4.0--》5.4--》MinGW 4.9 (32-bit)--》Qt 5.4 for Desktop (MinGW 4.9 32 bit)，
+打开 Qt 命令行
+将可执行exe文件新建一个文件夹，Qt命令行cd进入该文件夹
+输入：windeployqt XXX.exe即可
