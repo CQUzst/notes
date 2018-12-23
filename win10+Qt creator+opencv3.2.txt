@@ -1,48 +1,50 @@
-µçÄÔÏµÍ³£ºWindows10 64Î»
+ç”µè„‘ç³»ç»Ÿï¼šWindows10 64ä½
 
-ÒªÏÂÔØµÄÎÄ¼ş£º
+è¦ä¸‹è½½çš„æ–‡ä»¶ï¼š
 
-1¡¢Qt 5.6.0 for Windows 32-bit£¬ÏÂÔØµØÖ·£º
+1ã€Qt 5.6.0 for Windows 32-bitï¼Œä¸‹è½½åœ°å€ï¼š
 
 http://download.qt.io/official_releases/qt/5.6/5.6.0/qt-opensource-windows-x86-mingw492-5.6.0.exe
 
-2¡¢CMake 3.5£¬ÏÂÔØµØÖ·£º
+æœ€æ–°ç‰ˆQt creator å–æ¶ˆè­¦å‘Šæç¤ºï¼š å¸®åŠ© å…³äºæ’ä»¶ å–æ¶ˆC++ç»„çš„ ClanCodeModel
+
+2ã€CMake 3.5ï¼Œä¸‹è½½åœ°å€ï¼š
 
 https://cmake.org/files/v3.5/cmake-3.5.0-win32-x86.zip
 
-3¡¢OpenCV3.1£¬ÏÂÔØµØÖ·£º£¨Õâ¸öĞèÒªÏÈ´ò¿ªÍøÖ·£¬È»ºóÔÚµã»÷ Download opencv-3.1.0.exe£©
+3ã€OpenCV3.1ï¼Œä¸‹è½½åœ°å€ï¼šï¼ˆè¿™ä¸ªéœ€è¦å…ˆæ‰“å¼€ç½‘å€ï¼Œç„¶ååœ¨ç‚¹å‡» Download opencv-3.1.0.exeï¼‰
 
 https://sourceforge.NET/projects/opencvlibrary/files/OpenCV-win/3.1.0/opencv-3.1.0.exe
 
-Ìí¼Ó»·¾³±äÁ¿£º
+æ·»åŠ ç¯å¢ƒå˜é‡ï¼š
 D:\Qt\5.10.0\mingw53_32\bin
 D:\Qt\Tools\mingw530_32\bin
 
-Ìí¼ÓÍê»·¾³±äÁ¿ÒªÖØÆôµçÄÔ
+æ·»åŠ å®Œç¯å¢ƒå˜é‡è¦é‡å¯ç”µè„‘
 
 cmake-gui
-Where is the source code£ºÑ¡ÔñOpenCV½âÑ¹µÄÔ´ÎÄ¼şÎÄ¼ş¼ĞÎ»ÖÃ£» 
-Where to build the binaries£ºÑ¡Ôñ×Ô¶¨ÒåµÄ¿ÕÎÄ¼ş¼ĞÓÃÓÚ±£´æÉú³É¶ÔÏó 
-µã»÷Next°´Å¥£¬»á³öÏÖÅäÖÃ±àÒëÆ÷gccºÍg++µÄ½çÃæ,gccºÍg++ÔÚQt°²×°Ä¿Â¼ÏÂ£º 
+Where is the source codeï¼šé€‰æ‹©OpenCVè§£å‹çš„æºæ–‡ä»¶æ–‡ä»¶å¤¹ä½ç½®ï¼› 
+Where to build the binariesï¼šé€‰æ‹©è‡ªå®šä¹‰çš„ç©ºæ–‡ä»¶å¤¹ç”¨äºä¿å­˜ç”Ÿæˆå¯¹è±¡ 
+ç‚¹å‡»NextæŒ‰é’®ï¼Œä¼šå‡ºç°é…ç½®ç¼–è¯‘å™¨gccå’Œg++çš„ç•Œé¢,gccå’Œg++åœ¨Qtå®‰è£…ç›®å½•ä¸‹ï¼š 
 D:\Qt\Qt5.8.0\Tools\mingw530_32\bin\gcc 
 D:\Qt\Qt5.8.0\Tools\mingw530_32\bin\g++
 Configure
-Ñ¡ÔñWITH_OPENGLºÍWITH_QTÖ§³ÖÑ¡Ïî 
-È¡ÏûENABLE_PRECOMPILED_HEADERS 
+é€‰æ‹©WITH_OPENGLå’ŒWITH_QTæ”¯æŒé€‰é¡¹ 
+å–æ¶ˆENABLE_PRECOMPILED_HEADERS 
 Configure Configure  Generate
 
-´ò¿ªCMD´°¿Ú£¬½øÈëÉú³ÉOpenCVÄ¿±êÎÄ¼şµÄÎÄ¼ş¼Ğ£¬ÊäÈëmingw32-make¿ªÊ¼±àÒë
-ÎªÁË¼Ó¿ì±àÒëËÙ¶È£¬¿ÉÒÔÊ¹ÓÃ-j±êÖ¾Í¬Ê±ÔËĞĞ¶à¸ö±àÒë×÷Òµ¡£ ÔÚ8ºËCPUÉÏ£¬Äú¿ÉÒÔ½«ÆäÉèÖÃÎª8»ò¸ü¸ß¡£
+æ‰“å¼€CMDçª—å£ï¼Œè¿›å…¥ç”ŸæˆOpenCVç›®æ ‡æ–‡ä»¶çš„æ–‡ä»¶å¤¹ï¼Œè¾“å…¥mingw32-makeå¼€å§‹ç¼–è¯‘
+ä¸ºäº†åŠ å¿«ç¼–è¯‘é€Ÿåº¦ï¼Œå¯ä»¥ä½¿ç”¨-jæ ‡å¿—åŒæ—¶è¿è¡Œå¤šä¸ªç¼–è¯‘ä½œä¸šã€‚ åœ¨8æ ¸CPUä¸Šï¼Œæ‚¨å¯ä»¥å°†å…¶è®¾ç½®ä¸º8æˆ–æ›´é«˜ã€‚
  cd d:\
  cd opencv-build  
  mingw32-make -j 8
  mingw32-make install
 
-Ìí¼Ó»·¾³±äÁ¿
+æ·»åŠ ç¯å¢ƒå˜é‡
 D:\opencv-build\install\x86\mingw\bin
-Ìí¼ÓÍê»·¾³±äÁ¿ÒªÖØÆôµçÄÔ
+æ·»åŠ å®Œç¯å¢ƒå˜é‡è¦é‡å¯ç”µè„‘
 
-qt creator proÎÄ¼ş¼ÓÈë
+qt creator proæ–‡ä»¶åŠ å…¥
 INCLUDEPATH += D:/opencv/install/install/include/opencv \
             D:/opencv/install/install/include/opencv2  \
             D:/opencv/install/install/include
