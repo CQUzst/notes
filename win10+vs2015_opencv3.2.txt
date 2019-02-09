@@ -1,0 +1,17 @@
+1.下载opencv3.2
+https://sourceforge.NET/projects/opencvlibrary/files/OpenCV-win 安装
+2.添加环境变量，我的电脑—>属性—>高级系统设置—>环境变量 添加opencv-3.2.0-vc14\opencv\build\x64\vc14\bin
+3.打开VS 2015，新建一个空白的Win32的控制台工程，如果没有win32控制台，选择Visual C++ windows 安装组件 等待完成
+新建空白控制台程序
+4.配置工具：选择视图-其他窗口-属性管理器。选择Debug 64，双击Microsoft.Cpp.x64.user
+5.在通用属性（Common Properties）—>VC ++目录—>包含目录，然后点击右侧三角标志选中Edit进入编辑：
+向其中添加下面三个路径：
+D:\Program Files\opencv-3.2.0-vc14\opencv\build\include
+D:\Program Files\opencv-3.2.0-vc14\opencv\build\include\opencv
+D:\Program Files\opencv-3.2.0-vc14\opencv\build\include\opencv2 
+6.完成上面的目录配置后，还需要进行库文件配置：回到属性界面，选择包含目录下面的Library Directories（库文件目录） 
+7.向库文件目录中添加OpenCV的库文件目录：D:\Program Files\opencv-3.2.0-vc14\opencv\build\x64\vc14\lib 注意不是bin
+8.在属性界面中打开Linker(链接库)—>Input(输入)—>Additional Dependencies(添加依赖)
+9.将OpenCV库文件目录中看到的两个库文件其中一个添加到这里（根据模式需求Release模式或者Debug模式） opencv_world320d.lib
+10若运行程序时提示缺少opencv_world320d.dll或opencv_world320.dll，请复制D:\opencv\build\x64\vc14\bin目录下的相应的dll到C:\Windows\System32
+运行时将工具栏x86换成x64即可
