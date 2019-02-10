@@ -1,0 +1,28 @@
+1.先下载安装VS2015，里面包换环境依赖项
+
+2.安装anaconda3.5.1 python3.6版本 见其他教程
+
+3.下载安装CUDA9.0 https://developer.nvidia.com/cuda-90-download-archive windows x86_64 10 exe(local)
+安装路径可以自选，检查系统兼容性会提醒版本问题，不管，继续下一步，自定义，将下面部分版本低于现有版本的内容钩取消掉
+将cuda安装的部分路径添加到系统环境变量：
+C：program Files\NVIDIA GPU Computing Tookit\CUDA\v9.0
+C：program Files\NVIDIA GPU Computing Tookit\CUDA\v9.0\lib\x64
+
+4.下载cudnn for CUDA9.0  https://developer.nvidia.com/cudnn 需要注册登陆
+解压压缩包，把压缩包中bin,include,lib中的文件分别拷贝到C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0目录下对应目录中 可选：再将cudnn目录下的cuda/bin添加到系统环境变量
+
+5.安装TensorFlow-gpu 
+打开命令提示符，使用命令pip install tensorflow-gpu 进行安装
+
+6.测试
+新建py_test.py
+import tensorflow as tf
+hello = tf.constant('Hello, TensorFlow!')
+sess = tf.Session()
+print(sess.run(hello))
+cmd进入py文件夹，python py_test.py运行 第一次运行较慢
+
+7.解决问题:FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+pip install h5py==2.8.0rc1
+
+完成
