@@ -1,28 +1,31 @@
-1.ÏÈÏÂÔØ°²×°VS2015£¬ÀïÃæ°ü»»»·¾³ÒÀÀµÏî
+1.å…ˆä¸‹è½½å®‰è£…VS2015ï¼Œé‡Œé¢åŒ…æ¢ç¯å¢ƒä¾èµ–é¡¹
 
-2.°²×°anaconda3.5.1 python3.6°æ±¾ ¼ûÆäËû½Ì³Ì
+2.å®‰è£…anaconda3.5.1 python3.6ç‰ˆæœ¬ è§å…¶ä»–æ•™ç¨‹
 
-3.ÏÂÔØ°²×°CUDA9.0 https://developer.nvidia.com/cuda-90-download-archive windows x86_64 10 exe(local)
-°²×°Â·¾¶¿ÉÒÔ×ÔÑ¡£¬¼ì²éÏµÍ³¼æÈİĞÔ»áÌáĞÑ°æ±¾ÎÊÌâ£¬²»¹Ü£¬¼ÌĞøÏÂÒ»²½£¬×Ô¶¨Òå£¬½«ÏÂÃæ²¿·Ö°æ±¾µÍÓÚÏÖÓĞ°æ±¾µÄÄÚÈİ¹³È¡Ïûµô
-½«cuda°²×°µÄ²¿·ÖÂ·¾¶Ìí¼Óµ½ÏµÍ³»·¾³±äÁ¿£º
-C£ºprogram Files\NVIDIA GPU Computing Tookit\CUDA\v9.0
-C£ºprogram Files\NVIDIA GPU Computing Tookit\CUDA\v9.0\lib\x64
+3.ä¸‹è½½å®‰è£…CUDA9.0 https://developer.nvidia.com/cuda-90-download-archive windows x86_64 10 exe(local)
+å®‰è£…è·¯å¾„å¯ä»¥è‡ªé€‰ï¼Œæ£€æŸ¥ç³»ç»Ÿå…¼å®¹æ€§ä¼šæé†’ç‰ˆæœ¬é—®é¢˜ï¼Œä¸ç®¡ï¼Œç»§ç»­ä¸‹ä¸€æ­¥ï¼Œè‡ªå®šä¹‰ï¼Œå°†ä¸‹é¢éƒ¨åˆ†ç‰ˆæœ¬ä½äºç°æœ‰ç‰ˆæœ¬çš„å†…å®¹é’©å–æ¶ˆæ‰
+å°†cudaå®‰è£…çš„éƒ¨åˆ†è·¯å¾„æ·»åŠ åˆ°ç³»ç»Ÿç¯å¢ƒå˜é‡ï¼š
+Cï¼šprogram Files\NVIDIA GPU Computing Tookit\CUDA\v9.0
+Cï¼šprogram Files\NVIDIA GPU Computing Tookit\CUDA\v9.0\lib\x64
 
-4.ÏÂÔØcudnn for CUDA9.0  https://developer.nvidia.com/cudnn ĞèÒª×¢²áµÇÂ½
-½âÑ¹Ñ¹Ëõ°ü£¬°ÑÑ¹Ëõ°üÖĞbin,include,libÖĞµÄÎÄ¼ş·Ö±ğ¿½±´µ½C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0Ä¿Â¼ÏÂ¶ÔÓ¦Ä¿Â¼ÖĞ ¿ÉÑ¡£ºÔÙ½«cudnnÄ¿Â¼ÏÂµÄcuda/binÌí¼Óµ½ÏµÍ³»·¾³±äÁ¿
+4.ä¸‹è½½cudnn for CUDA9.0  https://developer.nvidia.com/cudnn éœ€è¦æ³¨å†Œç™»é™†
+è§£å‹å‹ç¼©åŒ…ï¼ŒæŠŠå‹ç¼©åŒ…ä¸­bin,include,libä¸­çš„æ–‡ä»¶åˆ†åˆ«æ‹·è´åˆ°C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0ç›®å½•ä¸‹å¯¹åº”ç›®å½•ä¸­ å¯é€‰ï¼šå†å°†cudnnç›®å½•ä¸‹çš„cuda/binæ·»åŠ åˆ°ç³»ç»Ÿç¯å¢ƒå˜é‡
 
-5.°²×°TensorFlow-gpu 
-´ò¿ªÃüÁîÌáÊ¾·û£¬Ê¹ÓÃÃüÁîpip install tensorflow-gpu ½øĞĞ°²×°
+5.å®‰è£…TensorFlow-gpu 
+æ‰“å¼€å‘½ä»¤æç¤ºç¬¦ï¼Œä½¿ç”¨å‘½ä»¤pip install tensorflow-gpu è¿›è¡Œå®‰è£…
 
-6.²âÊÔ
-ĞÂ½¨py_test.py
+6.æµ‹è¯•
+æ–°å»ºpy_test.py
 import tensorflow as tf
 hello = tf.constant('Hello, TensorFlow!')
 sess = tf.Session()
 print(sess.run(hello))
-cmd½øÈëpyÎÄ¼ş¼Ğ£¬python py_test.pyÔËĞĞ µÚÒ»´ÎÔËĞĞ½ÏÂı
+cmdè¿›å…¥pyæ–‡ä»¶å¤¹ï¼Œpython py_test.pyè¿è¡Œ ç¬¬ä¸€æ¬¡è¿è¡Œè¾ƒæ…¢
 
-7.½â¾öÎÊÌâ:FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+7.è§£å†³é—®é¢˜:FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
 pip install h5py==2.8.0rc1
 
-Íê³É
+8.æ³¨æ„ï¼šå¦‚æœæ¢æˆCUDA10ï¼Œcudnn7.4ï¼Œtensorflow-gpuç‰ˆæœ¬ä¸èƒ½ç”¨é»˜è®¤ä¸‹è½½ç‰ˆæœ¬ï¼Œéœ€è¦ä¸‹è½½
+https://github.com/fo40225/tensorflow-windows-wheel/tree/master/1.12.0/py36/GPU é‡Œsse2ç‰ˆæœ¬ï¼Œç„¶åcdè¿›å…¥è·¯å¾„ï¼Œpip install ....whl
+
+å®Œæˆ
