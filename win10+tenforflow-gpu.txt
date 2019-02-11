@@ -9,7 +9,7 @@ C：program Files\NVIDIA GPU Computing Tookit\CUDA\v9.0
 C：program Files\NVIDIA GPU Computing Tookit\CUDA\v9.0\lib\x64
 
 4.下载cudnn for CUDA9.0  https://developer.nvidia.com/cudnn 需要注册登陆
-解压压缩包，把压缩包中bin,include,lib中的文件分别拷贝到C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0目录下对应目录中 可选：再将cudnn目录下的cuda/bin添加到系统环境变量
+解压压缩包，把压缩包中bin,include,lib中的文件分别拷贝到C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0目录下对应目录中 再将cudnn目录下的cuda/bin添加到系统环境变量
 
 5.安装TensorFlow-gpu 
 打开命令提示符，使用命令pip install tensorflow-gpu 进行安装
@@ -27,5 +27,8 @@ pip install h5py==2.8.0rc1
 
 8.注意：如果换成CUDA10，cudnn7.4，tensorflow-gpu版本不能用默认下载版本，需要下载
 https://github.com/fo40225/tensorflow-windows-wheel/tree/master/1.12.0/py36/GPU 里sse2版本，然后cd进入路径，pip install ....whl
+理论上可以成功了，结果显示CUDA版本和CUDA运行程序版本不匹配，查了很久发现是因为显卡驱动版本不是最新版
+我买的笔记本显卡驱动只能从神州精盾官网下载，版本还是399.0，不适配最新CUDA10（需要412好像），坑了我好几天折腾，哎
+最终回滚到CUDA9，正常运行
 
 完成
