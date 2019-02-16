@@ -1,45 +1,45 @@
 qt5
 sudo apt-get install qt5-default qtcreator
 
-Ò» °²×°opencvËùĞè¿â
+ä¸€ å®‰è£…opencvæ‰€éœ€åº“
 
-$sudo apt-get install build-essential
-$ sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
-$ sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev # ´¦ÀíÍ¼ÏñËùĞèµÄ°ü
-$ sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev liblapacke-dev
-$ sudo apt-get install libxvidcore-dev libx264-dev # ´¦ÀíÊÓÆµËùĞèµÄ°ü
-$ sudo apt-get install libatlas-base-dev gfortran # ÓÅ»¯opencv¹¦ÄÜ
-$ sudo apt-get install ffmpeg
+sudo apt-get install build-essential
+sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev # å¤„ç†å›¾åƒæ‰€éœ€çš„åŒ…
+sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev liblapacke-dev
+sudo apt-get install libxvidcore-dev libx264-dev # å¤„ç†è§†é¢‘æ‰€éœ€çš„åŒ…
+sudo apt-get install libatlas-base-dev gfortran # ä¼˜åŒ–opencvåŠŸèƒ½
+sudo apt-get install ffmpeg
 
 
-¶ş ÏÂÔØ×îĞÂopencvÔ´Âë 
-1 ½«ÎÄ¼ş¼ĞÏÂopencv3.4Ñ¹Ëõ°ü·Åµ½homeÏÂ
+äºŒ ä¸‹è½½æœ€æ–°opencvæºç  
+1 å°†æ–‡ä»¶å¤¹ä¸‹opencv3.4å‹ç¼©åŒ…æ”¾åˆ°homeä¸‹
 2 unzip opencv-3.4.1.zip
 3 cd ~/opencv-3.4.1
 
-3.±àÒëopencv
+3.ç¼–è¯‘opencv
 1 cd ~/opencv-3.4.1
 2 mkdir release
 3 cd release
 4.sudo apt-get install cmake-gui
 5.cmake-gui
-µÚÒ»ĞĞÑ¡ÔñÂ·¾¶/home/zst/opencv-3.4.1
-µÚ¶şĞĞÑ¡ÔñÂ·¾¶/home/zst/opencv-3.4.1/release
+ç¬¬ä¸€è¡Œé€‰æ‹©è·¯å¾„/home/zst/opencv-3.4.1
+ç¬¬äºŒè¡Œé€‰æ‹©è·¯å¾„/home/zst/opencv-3.4.1/release
 finish
-Ö®ºóÓĞ¸ö¶«Î÷ÒªÏÂÔØºÜ¾Ã
-ÏÂ±ßÀ¸ÖĞ
-¹´Ñ¡£ºBUILD_opencv_world  BUILD_TBB  WITH_V4L 
-Èç¹û°²×°¹ıCUDA»áÏÔÊ¾with cuda ²»Òª¹´Ñ¡BUILD_CUDA STUBS
-µã»÷ generateÖ±µ½configureÖØĞÂÁÁ
+ä¹‹åæœ‰ä¸ªä¸œè¥¿è¦ä¸‹è½½å¾ˆä¹…
+ä¸‹è¾¹æ ä¸­
+å‹¾é€‰ï¼šBUILD_opencv_world  BUILD_TBB  WITH_V4L 
+å¦‚æœå®‰è£…è¿‡CUDAä¼šæ˜¾ç¤ºwith cuda ä¸è¦å‹¾é€‰BUILD_CUDA STUBS
+ç‚¹å‡» generateç›´åˆ°configureé‡æ–°äº®
 
-¹Ø±ÕGUI½çÃæ
+å…³é—­GUIç•Œé¢
 6.make
 7.sudo make install
 
-¸øÏµÍ³¼ÓÈëopencv¿âµÄ»·¾³±äÁ¿
-8.sudo gedit /etc/ld.so.conf£¬ÔÚÎÄ¼şÖĞ¼ÓÉÏÒ»ĞĞ /usr/loacal/lib(/user/local/libÊÇopencv°²×°Â·¾¶) ÔÙÔËĞĞsudo ldconfig
-9.ĞŞ¸Äbash.bashrcÎÄ¼ş£¬sudo gedit /etc/bash.bashrc 
-ÔÚÎÄ¼şÄ©Î²¼ÓÈë£º 
+ç»™ç³»ç»ŸåŠ å…¥opencvåº“çš„ç¯å¢ƒå˜é‡
+8.sudo gedit /etc/ld.so.confï¼Œåœ¨æ–‡ä»¶ä¸­åŠ ä¸Šä¸€è¡Œ /usr/loacal/lib(/user/local/libæ˜¯opencvå®‰è£…è·¯å¾„) å†è¿è¡Œsudo ldconfig
+9.ä¿®æ”¹bash.bashrcæ–‡ä»¶ï¼Œsudo gedit /etc/bash.bashrc 
+åœ¨æ–‡ä»¶æœ«å°¾åŠ å…¥ï¼š 
 PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig 
 export PKG_CONFIG_PATH 
-10.È»ºósource /etc/bash.bashrc,Íê³É
+10.ç„¶åsource /etc/bash.bashrc,å®Œæˆ
