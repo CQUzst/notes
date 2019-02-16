@@ -43,3 +43,40 @@ finish
 PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig 
 export PKG_CONFIG_PATH 
 10.然后source /etc/bash.bashrc,完成
+
+11.Qt下载编译器
+参考步骤：https://blog.csdn.net/arackethis/article/details/42837675
+
+12.pro项目里添加
+INCLUDEPATH += /usr/local/include \
+/usr/local/include/opencv \
+/usr/local/include/opencv2
+
+LIBS += /usr/local/lib/libopencv_world.so \
+/usr/local/lib/libopencv_world.so.3.4 \
+/usr/local/lib/libopencv_world.so.3.4.0 \
+
+13.测试opencv
+
+#include <opencv2/opencv.hpp>
+#include <iostream>
+#include <string>
+using namespace cv;
+using namespace std;
+int main()
+{
+    cvNamedWindow("我的摄像头", CV_WINDOW_AUTOSIZE);
+    //captue = cvCaptureFromCAM(0);
+    VideoCapture captue(0);//创建一个摄像头对象并且指定摄像头编号，只有一个写0就可以
+    //captue = cvCreateCameraCapture(0);
+
+    Mat frame;
+    while (1)
+    {
+        captue >> frame;
+        imshow("我的摄像头", frame);
+        waitKey(30);
+    }
+    return 0;
+}
+
