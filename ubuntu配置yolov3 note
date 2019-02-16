@@ -1,4 +1,4 @@
-//系统ubuntu16.04，非GPU版本	
+//系统ubuntu16.04，已经配置好CUDA，CUDNN，OPENCV3.4
 1.下载darknet
 git clone https://github.com/pjreddie/darknet.git
 cd darknet
@@ -6,9 +6,11 @@ make
 2. 保持当前目录 ./darknet   正常会显示usage: ./darknet <function>
 3.下载编译opencv，环境添加到系统变量，教程见另一个note <ubuntu安装opencv> 
   注意：opencv必须是3.40版本，3.41编译有问题。 
-  然后makefile 里面 OPENCV=1
+  然后makefile 里面 OPENCV=1，如果要调用GPU，将GPU和CUDNN也置为1
 4.测试一下 ./darknet imtest data/eagle.jpg 会出现一只老鹰
 同样在darknet目录下，执行
 wget https://pjreddie.com/media/files/yolov3.weights   #下载权重文件
+wget https://pjreddie.com/media/files/yolov3-tiny.weights   #下载权重文件
 ./darknet detect cfg/yolov3.cfg yolov3.weights （data/dog.jpg）  #使用下载的权重文件进行图片检测，括号内是图片路径，可以随便改
 ./darknet detector demo cfg/coco.data cfg/yolov3.cfg yolov3.weights <video file> #视频检测 <里面是视频路径>
+./darknet detector demo cfg/coco.data cfg/yolov3-tiny.cfg yolov3-tiny.weights -thresh 0.1 #利用opencv调用摄像头，最低阈值调整为0.1
