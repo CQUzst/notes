@@ -1,0 +1,11 @@
+环境：ubuntu16.04 anaconda已安装，python版本为3.64
+1.https://github.com/tzutalin/labelImg下载
+解压缩到home路径下
+
+2.安装依赖
+sudo apt-get install pyqt5-dev-tools 
+pip install lxml 
+make qt5py3
+
+3.cd 进入路径
+python labelImg.py
