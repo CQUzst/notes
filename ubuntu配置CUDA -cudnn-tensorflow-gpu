@@ -1,0 +1,91 @@
+1.ubuntu安装英伟达显卡驱动：系统设置-软件和更新-附加驱动-选择NVIDIA驱动384 这是最简单的方法
+terminal输入nvidia-smi验证显卡驱动是否安装成功
+
+2.安装CUDA和cuDNN的依赖软件
+在命令行输入命令：
+sudo apt-get install libcupti-dev
+
+3.CUDA9安和cudnn下载：https://developer.nvidia.com/cuda-90-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=runfilelocal
+选择Linux-x86_64-ubuntu-16.04-runfile(local)，不要选deb，安装会出问题
+以及在cudnn官网下载cudnn for cuda9,版本选ubuntu for linux
+放在home下qudong文件夹中
+cd qudong
+sudo sh cuda_9.0.176_384.81_linux.run
+然后一直回车键，直到服务条款显示到100%。接着按下面的步骤选择：
+accept
+n（不要安装driver）
+y
+y
+y
+安装完成后，设置环境变量。
+
+cudnn下载完成后解压缩，复制文件
+sudo cp cuda/include/cudnn.h /usr/local/cuda-9.0/include/
+sudo cp cuda/lib64/libcudnn* /usr/local/cudacuda-9.0/lib64/
+sudo chmod a+r /usr/local/cudacuda-9.0/include/cudnn.h
+sudo chmod a+r /usr/local/cudacuda-9.0/lib64/libcudnn*
+
+
+4.添加环境变量
+export PATH=/usr/local/cuda-9.0/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+//下面是cudnn的
+export LD_LIBRARY_PATH=/home/qudong/cuda/lib64:$LD_LIBRARY_PATH
+//下面这个是anaconda的环境
+export PATH=/home/zst/anaconda3/bin:$PATH
+终端运行：source ~/.bashrc
+
+5.检查cuda和cudnn是否安装成功：nvcc --version
+cat /usr/local/cuda-9.0/include/cudnn.h | grep CUDNN_MAJOR -A 2
+
+6.安装anaconda
+清华Anaconda镜像地址https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/下载Anaconda3-5.0.0-Linux-x86_64.sh
+下载完进入下载目录 bash Anaconda3-5.0.0-Linux-x86_64.sh 一直enter yes
+终端输入python看是否为anaconda版本，如果不是，添加环境变量export PATH=/home/zst/anaconda3/bin:$PATH
+
+7.安装tensorflow-gpu
+直接终端输入如下命令：pip install tensorflow-gpu
+完成后python
+import tensorflow
+报警告：/home/zst/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+解决：
+pip install h5py==2.8.0rc1
+
+测试一个简单的例子
+import numpy as np
+import tensorflow as tf
+
+# Model parameters
+W = tf.Variable([.3], dtype=tf.float32)
+b = tf.Variable([-.3], dtype=tf.float32)
+# Model input and output
+x = tf.placeholder(tf.float32)
+linear_model = W * x + b
+y = tf.placeholder(tf.float32)
+# loss
+loss = tf.reduce_sum(tf.square(linear_model - y)) # sum of the squares
+
+# optimizer,定义一个优化器，使用梯度下降优化方法
+optimizer = tf.train.GradientDescentOptimizer(0.01)
+#优化器最小化loss
+train = optimizer.minimize(loss)
+
+# training data
+x_train = [1,2,3,4]
+y_train = [0,-1,-2,-3]
+
+# training loop
+init = tf.global_variables_initializer()
+sess = tf.Session()
+sess.run(init) # reset values to wrong
+
+#迭代一千次后，参数已经训练好
+for i in range(1000):
+  sess.run(train, {x:x_train, y:y_train})
+
+#送入训练好的参数，求出loss
+# evaluate training accuracy
+curr_W, curr_b, curr_loss = sess.run([W, b, loss], {x:x_train, y:y_train})
+print("W: %s b: %s loss: %s"%(curr_W, curr_b, curr_loss))
+
+
