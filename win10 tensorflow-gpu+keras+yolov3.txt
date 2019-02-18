@@ -1,11 +1,16 @@
-»·¾³£ºwin10,tensorflow_gpu,cuda9,cudnn7.4 for cuda9,pycharmÒÑ¾­°²×°ºÃ
-²Î¿¼²©¿Í£ºhttps://blog.csdn.net/u012746060/article/details/81183006
+ç¯å¢ƒï¼šwin10,tensorflow_gpu,cuda9,cudnn7.4 for cuda9,pycharmå·²ç»å®‰è£…å¥½
+å‚è€ƒåšå®¢ï¼šhttps://blog.csdn.net/u012746060/article/details/81183006
 1.opencv-python pip install python-opencv,
 2.pip install keras
-3.ÏÂÔØyolov3´úÂë£ºhttps://github.com/qqwweee/keras-yolo3 £¬²¢½âÑ¹ËõÖ®ºóÓÃpycharm´ò¿ª¡£
-4.ÏÂÔØÈ¨ÖØ£ºhttps://pjreddie.com/media/files/yolov3.weights²¢½«È¨ÖØ·ÅÔÚkeras-yolo3µÄÎÄ¼ş¼ĞÏÂ¡£ÈçÏÂÍ¼ËùÊ¾£º
-3¡¢Ö´ĞĞÈçÏÂÃüÁî½«darknetÏÂµÄyolov3ÅäÖÃÎÄ¼ş×ª»»³ÉkerasÊÊÓÃµÄh5ÎÄ¼ş¡£
+3.ä¸‹è½½yolov3ä»£ç ï¼šhttps://github.com/qqwweee/keras-yolo3 ï¼Œå¹¶è§£å‹ç¼©ä¹‹åç”¨pycharmæ‰“å¼€ã€‚
+4.ä¸‹è½½æƒé‡ï¼šhttps://pjreddie.com/media/files/yolov3.weightså¹¶å°†æƒé‡æ”¾åœ¨keras-yolo3çš„æ–‡ä»¶å¤¹ä¸‹ã€‚å¦‚ä¸‹å›¾æ‰€ç¤ºï¼š
+3ã€æ‰§è¡Œå¦‚ä¸‹å‘½ä»¤å°†darknetä¸‹çš„yolov3é…ç½®æ–‡ä»¶è½¬æ¢æˆkerasé€‚ç”¨çš„h5æ–‡ä»¶ã€‚
 python convert.py yolov3.cfg yolov3.weights model_data/yolo.h5
-4¡¢ÔËĞĞÔ¤²âÍ¼Ïñ³ÌĞò
+4ã€è¿è¡Œé¢„æµ‹å›¾åƒç¨‹åº
 python yolo_video.py --image c1.jpg
 python yolo_video.py --input e:car.avi
+
+yolov3-tiny è½¬æ¢é—®é¢˜
+åœ¨è½¬æ¢ yolov3-tiny åè¿›è¡Œæµ‹è¯•æ—¶æŠ¥é”™æ¨¡å‹/anchors boxes ä¸ä¸€è‡´
+æ˜¯å› ä¸ºé»˜è®¤åŠ è½½çš„æ˜¯ yolo_anchors.txt è€Œä¸æ˜¯ tiny_yolo_anchors.txt
+è¿™ä¸¤ä¸ªæ–‡ä»¶å†…çš„æ¯”ä¾‹æ•°é‡æ˜¯ä¸ä¸€æ ·çš„ï¼Œåªéœ€å°† tiny_yolo_anchors.txt çš„åç§°æš‚æ—¶æ”¹ä¸º yolo_anchors.txt å³å¯
