@@ -9,6 +9,8 @@ python convert.py yolov3.cfg yolov3.weights model_data/yolo.h5
 4、运行预测图像程序
 python yolo_video.py --image c1.jpg
 python yolo_video.py --input e:car.avi
+5.训练之前要按照cfg内容将weights转换成.h5格式
+python convert.py -w yolov3.cfg yolov3.weights model_data/yolo_weights.h5
 
 yolov3-tiny 转换问题
 在转换 yolov3-tiny 后进行测试时报错模型/anchors boxes 不一致
