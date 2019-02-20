@@ -1,0 +1,38 @@
+环境：win10 anaconda3已经配好
+1.labelImg安装包
+链接: https://pan.baidu.com/s/1XzobTmBkxdn0Q9XlJHNf3w 提取码: hkd5
+解压
+
+2.cmd 使用cd 命令进入刚刚下载解压的labelimg文件夹
+然后安装pyqt，安装命令：conda install pyqt=5
+
+3.安装完成后，执行命令：
+pyrcc5 -o resources.py resources.qrc
+这个执行完成是没有任何返回结果的
+
+4.最后，输入命令：
+python labelImg.py
+
+5。操作
+在labelImg文件中，有个data文件夹，里面有predefined_classes.txt记录着分类名称，可以手动更改类别
+
+选择File->Change Saved Dir（不同版本稍微有些差异，也可能叫做changedefault annatation saved dir）,
+然后选择一个空文件夹作为你生成的标记xml存放的位置
+
+点击Open Dir选择你的影像图片文件夹
+之后，图片便加载进来了，点击左侧Create RectBox，就可以在图像上绘制矩形框了。
+因为版本差异，绘制矩形框有的需要一直按住鼠标左键，有的则只用初始和结束位置点击一下，视具体版本情况而定。
+
+绘制结束后，会弹出一个框，选择你要标记的类别，比如dog，如果列表里面没有这个类别，可以在方框中输入，最后点击OK。此时，按住Ctrl+S才算保存，之后，可以使用鼠标点击next image进入下一张或者使用快捷键D进入下一张
+
+相关的快捷键如下：
+Ctrl + s 保存
+Ctrl + d 复制当前标签和矩形框
+space    将当前图像标记为已验证
+w          创建一个矩形框
+d          下一张图片
+a          上一张图片
+del        删除选定的矩形框
+Ctrl++  放大
+Ctrl--    缩小
+↑→↓←   键盘箭头移动选定的矩形框
