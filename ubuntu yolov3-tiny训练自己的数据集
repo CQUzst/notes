@@ -11,6 +11,21 @@ ubuntu darknet 训练自己的数据集：
 	In line 12, modify "classes" based on actual categories
 	Run creatID py: python creatID.py
 	Run trans.py: python trans.py
+	如果安装了ros，错误如下：
+	Traceback (most recent call last):
+	File “./run.py”, line 9, in 
+	import cv2
+	ImportError: /opt/ros/kinetic/lib/python2.7/dist-packages/cv2.so: undefined symbol: PyCObject_Type
+在import cv2上下输入：
+……………………………………………………………………………………………………………………………………………………………………………………………………………………………………
+	import sys
+	ros_path = '/opt/ros/kinetic/lib/python2.7/dist-packages'
+	if ros_path in sys.path:
+	    sys.path.remove(ros_path)
+	import cv2
+	sys.path.append('/opt/ros/kinetic/lib/python2.7/dist-packages')
+……………………………………………………………………………………………………………………………………………………………………………………………………………………………………
+	
 	trainimagePath.txt and validateImagePath.txt will be generated
 	
 	Modify data/voc.name:
