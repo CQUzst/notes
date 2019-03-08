@@ -51,9 +51,13 @@ ubuntu darknet 训练自己的数据集：
 	wget https://pjreddie.com/media/files/darknet53.conv.74 
 	Then: 
 	./darknet detector train cfg/voc.data cfg/yolov3-tiny.cfg darknet53.conv.74
+接着训练：
+	./darknet detector train cfg/a_voc.data cfg/yolov3-tiny.cfg backup/yolov3-tiny_1000.weights
+
 	
 6.检测的时候detect 默认用的是data/coco.name，将其相应改成自己的name类即可
 ./darknet detect cfg/yolov3-voc.cfg backup/yolov3-tiny_10000.weights yourOwnImagePath/plate.jpg
+./darknet detect cfg/yolov3-tiny.cfg backup/yolov3-tiny_2000.weights /home/zst/darknet/validateImage/17.jpg
 
 7.训练到一半可以保存训练结果，如yolov3-tiny_10000.weights，再次训练时将darknet53.conv.74替换成自己的weights即可
 
