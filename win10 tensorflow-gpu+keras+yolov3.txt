@@ -6,6 +6,7 @@
 4.下载权重：https://pjreddie.com/media/files/yolov3.weights并将权重放在keras-yolo3的文件夹下。如下图所示：
 3、执行如下命令将darknet下的yolov3配置文件转换成keras适用的h5文件。
 python convert.py yolov3.cfg yolov3.weights model_data/yolo.h5
+如果是tiny要运行对应的.h5程序
 4、运行预测图像程序
 python yolo_video.py --image c1.jpg
 python yolo_video.py --input e:car.avi
