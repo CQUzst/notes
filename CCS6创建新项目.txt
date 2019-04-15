@@ -1,0 +1,27 @@
+参考网站：https://www.cnblogs.com/dongfengweixiao/p/5904067.html
+
+新建空的工程
+
+1.点击"Project"->"New CCS Project"。 
+2.在New CCS Project窗口中，按需要填写以下内容后按"Finish"完成新建空的工程。 
+1）选CPU；2）选调试器；3）选编译器；4）选empty with main；
+
+添加系统的头文件
+
+3.在工程名上右击，添加两个文件夹，分别名为source和include。 
+4.将F:\POP28335_CODE\DSP2833x_common\include和headers\include里面的.h拷贝到include，将一些.c和cmd拷贝到source里
+5.右击工程文件名，选择"Properties" ，更改include的选项
+6.
+添加必要的源文件
+在main函数中，添加以下的头文件：
+#include "DSP281x_Device.h"
+#include "DSP281x_Examples.h" 
+    一个能够正常在开发板上运行的工程，应该具备一下的必要的源文件。
+    
+    添加"DSP281x_headers\source"目录下的"DSP281x_GlobalVariableDefs.c"以指定所有系统结构体的存储位置。
+    添加"DSP281x_common\source"目录下的"DSP281x_SysCtrl.c"以初始化系统的控制选项，包括PLL，看门狗，预分频。
+    添加"DSP281x_common\source"目录下的"DSP281x_Gpio.c"以初始化系统的GPIO口。
+    添加"DSP281x_common\source"目录下的"DSP281x_PieCtrl.c以初始化PIE控制器。
+    添加"DSP281x_common\source"目录下的 "DSP281x_PieVect.c"以初始化PIE向量表。
+    添加"DSP281x_common\source"目录下的"DSP281x_InitPeripherals.c"以初始化其他外设。
+    添加"DSP281x_common\source"目录下的"DSP281x_DefaultIsr.c"以使用默认的中断函数。 
