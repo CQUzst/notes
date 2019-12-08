@@ -1,0 +1,2 @@
+PYCharm显示动态图需单独弹出视窗，具体设置方法如下：
+File->Settings->Tools->Python scientific->取消Show plots in tool window前的√
