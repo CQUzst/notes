@@ -1,0 +1,5 @@
+解决Tensorboard“无法显示此网站”
+
+第一步：打开cmd
+第二步：输入tensorboard --logdir=path（path为数据所在文件夹路径) --host=127.0.0.1
+第三步：复制路径名称，打开chrome，粘贴并搜索
